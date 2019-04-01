@@ -5,10 +5,9 @@ http.createServer((req, res) => {
         if (err) throw err;
         console.log('Saved!');
     });
-    
-    fs.readFile('sites.xml',(err,data) => {
+
+    fs.readFile('sites.xml', (err, data) => {
         res.write(data);
         res.end();
-        console.log(data);
     });
 }).listen('8080');
